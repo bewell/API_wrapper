@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 #
-# The sample curl request to the service is the json. Something like this
-# curl -i -H "Content-Type: application/json" -X POST -d '{"value":"310","type":"Tip 3","targetModule":"Target 3","active":true}' http://localhost:8080
+# curl -i -H "Content-Type: application/json" -X POST -d '{"SecurityToken":"1","user":"Steve"}' http://localhost:8080
 #
 #
 
@@ -29,17 +28,17 @@ class hello:
 #        return 'Hello, ' + name + '!'
     def POST(self, _):
         data = json.loads(web.data())
-        data_got_from_request = data["value"]
+        data_got_from_request = data["SecurityToken"]
 
-        print root[0][1].text
-
-#       for child in root:
-#               print 'child', child.tag
-
-
-
-        if data_got_from_request == '30':
+        for child in root.iter('SecurityToken'):
+            if data_got_from_request == child.text:
                 r = requests.get('https://api.github.com/events')
+
+
+        
+
+
+
 
 
         web.header('Content-Type', 'application/json')

@@ -1,17 +1,21 @@
-<users>
-    <user name="Rocky">
-        <id>1</id>
-        <value name="Rocky"/>
-        <age>38</age>
-    </user>
-    <user name ="Steve">
-        <id>2</id>
-        <value name="Steve"/>
-        <age>50</age>
-    </user>
-    <user name="Melinda">
-        <id>3</id>
-        <value name="Melinda"/>
-        <age>38</age>
-    </user>
-</users>
+<?xml version="1.0"?>
+<data>
+    <project name="Liechtenstein">
+        <SecurityToken>1</SecurityToken>
+        <NavID>2008</NavID>
+        <BSA>141100</BSA>
+        <ResponsiblePerson name="Austria" direction="E"/>
+    </project>
+    <project name="Singapore">
+        <SecurityToken>4</SecurityToken>
+        <NavID>2011</NavID>
+        <BSA>59900</BSA>
+        <ResponsiblePerson name="Malaysia" direction="N"/>
+    </project>
+    <project name="Panama">
+        <SecurityToken>68</SecurityToken>
+        <NavID>2011</NavID>
+        <BSA>13600</BSA>
+        <ResponsiblePerson name="Costa Rica" direction="W"/>
+    </project>
+</data>

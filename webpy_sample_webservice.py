@@ -8,7 +8,8 @@ import web
 import json
 import urlparse
 import requests
-import xml.etree.ElementTree as ET
+import xml.etree.ElementTree as ETT
+from lxml import etree as ET
 
 
 urls = (
@@ -27,13 +28,19 @@ class hello:
 #            name = 'World'
 #        return 'Hello, ' + name + '!'
     def POST(self, _):
-        data = json.loads(web.data())
-        data_got_from_request = data["SecurityToken"]
-
+        data = json.loads(web.data())   # in this step we load the json, that was received from client
+        SecurityToken_got_from_request = data["SecurityToken"]  #take only SecurityToken
+        
+        # from here we iterate the xml to confirm SecurityToken, also we are finding attribute of the same parrent
         for child in root.iter('SecurityToken'):
-            if data_got_from_request == child.text:
-                r = requests.get('https://api.github.com/events')
-
+            SecurityTokenParent = child.getparent()
+            if SecurityToken_got_from_request == child.text:
+                for NavId in root.iter('NavID'):
+                        NavIDParent = NavId.getparent()
+                        if SecurityTokenParent.attrib.values() == NavIDParent.attrib.values():
+                            print "You win"
+        #               r = requests.get('https://api.github.com/events')
+        # gaunam NavID parent, jeigu jie lygus, do action
 
         
 

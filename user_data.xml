@@ -2,20 +2,20 @@
 <data>
     <project name="Liechtenstein">
         <SecurityToken>1</SecurityToken>
-        <NavID>2008</NavID>
+        <TeamURL>2008</TeamURL>
         <BSA>141100</BSA>
-        <ResponsiblePerson name="Austria" direction="E"/>
+        <ResponsiblePerson name="Austria"/>
     </project>
     <project name="Singapore">
         <SecurityToken>4</SecurityToken>
-        <NavID>2011</NavID>
+        <TeamURL>http://google.com</TeamURL>
         <BSA>59900</BSA>
-        <ResponsiblePerson name="Malaysia" direction="N"/>
+        <ResponsiblePerson name="Malaysia"/>
     </project>
     <project name="Panama">
         <SecurityToken>68</SecurityToken>
-        <NavID>2011</NavID>
+        <TeamURL>2011</TeamURL>
         <BSA>13600</BSA>
-        <ResponsiblePerson name="Costa Rica" direction="W"/>
+        <ResponsiblePerson name="Costa Rica"/>
     </project>
 </data>

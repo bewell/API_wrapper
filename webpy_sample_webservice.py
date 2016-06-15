@@ -8,7 +8,6 @@ import web
 import json
 import urlparse
 import requests
-# import xml.etree.ElementTree as ETT
 from lxml import etree as ET
 from io import StringIO, BytesIO
 

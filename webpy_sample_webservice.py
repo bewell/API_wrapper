@@ -21,8 +21,8 @@ urls = (
     '/CreateScan', 'CreateScan',
 )
 
-WebInspectLicenseHost = "https://slgdsm020002314.intranet.barcapint.com/WIE/Licenseservice.asmx"
-WebInspectManagerHost = "https://slgdsm020002314.intranet.barcapint.com/WIE/Managerservice.asmx"
+WebInspectLicenseHost = "WIE/Licenseservice.asmx"
+WebInspectManagerHost = "WIE/Managerservice.asmx"
 
 ##### Parsing User data xml where the static tokens are kept ###########
 tree = ET.parse('user_data.xml')
@@ -59,8 +59,8 @@ class WrapperService:
             <AppVersion>10.50.308.10</AppVersion>
             <CompatibilityVersion>1.0</CompatibilityVersion>
             </clientInfo>
-            <username>ViliusSecTest1</username>
-            <password>P@ssw0rd</password>
+            <username>Username</username>
+            <password>password</password>
             </ObtainClientLicense2>
             </soap:Body>
             </soap:Envelope>"""
